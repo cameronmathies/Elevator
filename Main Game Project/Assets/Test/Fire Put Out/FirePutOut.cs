@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class FirePutOut : MonoBehaviour {
-    
-    
+
+    public GameObject yourObject;
+
 
     // Use this for initialization
     void FixedUpdate() {
