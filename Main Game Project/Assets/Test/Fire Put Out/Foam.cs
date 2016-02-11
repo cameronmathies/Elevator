@@ -7,7 +7,7 @@ public class Foam : MonoBehaviour {
     {
         if (target.tag == "Foam")
         {
-            Destroy(this.gameObject);
+           // Destroy(this.gameObject);
         }
     }
 }

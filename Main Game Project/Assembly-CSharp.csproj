@@ -47,11 +47,14 @@
   <ItemGroup>
      <Compile Include="Assets\Buttons.cs" />
      <Compile Include="Assets\Test\Dialogue\Dialogue.cs" />
+     <Compile Include="Assets\Test\Fire Put Out\Bullet.cs" />
      <Compile Include="Assets\Test\Fire Put Out\FireExtinguisherPickUp.cs" />
      <Compile Include="Assets\Test\Fire Put Out\FirePutOut.cs" />
      <Compile Include="Assets\Test\Fire Put Out\Foam.cs" />
      <Compile Include="Assets\Test\Fire Put Out\PickUp.cs" />
      <Compile Include="Assets\Test\Fire Put Out\PlayerMove.cs" />
+     <Compile Include="Assets\Test\Fire Put Out\Score.cs" />
+     <Compile Include="Assets\Test\Fire Put Out\ScoreManager.cs" />
      <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\AccurateLob.cs" />
      <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\Bomb.cs" />
      <Compile Include="Assets\iTweenExamples\AnimatingGUITextures\Scripts\PresentationScreen.cs" />

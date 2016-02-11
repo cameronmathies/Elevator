@@ -17,11 +17,11 @@ public class FirePutOut : MonoBehaviour
 
         }
 
-        if (holdingDown == false)
-        {
-            yourObject.tag = "Foamless";
+        //if (holdingDown == false)
+        //{
+        //    yourObject.tag = "Foamless";
 
-        }
+        //}
 
         if (Input.GetKey(KeyCode.H))
         {
