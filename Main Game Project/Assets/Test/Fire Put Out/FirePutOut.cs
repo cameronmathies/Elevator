@@ -6,13 +6,21 @@ public class FirePutOut : MonoBehaviour
 
     public GameObject yourObject;
     public ParticleSystem Foam;
-
+    bool holdingDown;
     // Use this for initialization
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKeyUp(KeyCode.G))
         {
-            yourObject.tag = "Foam";
+            yourObject.tag = "Foamless";
+            holdingDown = true;
+
+        }
+
+        if (holdingDown == false)
+        {
+            yourObject.tag = "Foamless";
+
         }
 
         if (Input.GetKey(KeyCode.H))
@@ -20,6 +28,7 @@ public class FirePutOut : MonoBehaviour
             yourObject.tag = "Foamless";
 
         }
+
     }
 
     // Update is called once per frame
@@ -28,6 +37,7 @@ public class FirePutOut : MonoBehaviour
 
         if (Input.GetKey(KeyCode.G))
         {
+            yourObject.tag = "Foam";
 
             Foam.Emit(10); //Emit some particle
         }
