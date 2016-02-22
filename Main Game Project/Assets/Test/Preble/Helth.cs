@@ -10,7 +10,7 @@ public class Helth : MonoBehaviour {
     void Start () {
         Health = 100;
 	}
-	void OnTriggerStay2D(Collider2D other)
+	void OnTriggerEnter2D(Collider2D other)
     {
         if (other.isTrigger)
         {
