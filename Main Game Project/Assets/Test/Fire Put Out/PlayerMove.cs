@@ -18,6 +18,10 @@ public class PlayerMove : MonoBehaviour
         {
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
-        
-	}
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+        }
+
+    }
 }
