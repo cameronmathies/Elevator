@@ -55,7 +55,6 @@
      <Compile Include="Assets\Test\Fire Put Out\PlayerMove.cs" />
      <Compile Include="Assets\Test\Fire Put Out\Score.cs" />
      <Compile Include="Assets\Test\Fire Put Out\ScoreManager.cs" />
-     <Compile Include="Assets\Test\Preble\Hellfire.cs" />
      <Compile Include="Assets\Test\Preble\Helth.cs" />
      <Compile Include="Assets\Test\Preble\Patrol.cs" />
      <Compile Include="Assets\iTweenExamples\AccurateLob\Scripts\AccurateLob.cs" />
@@ -106,17 +105,11 @@
      <Compile Include="Assets\iTweenExamples\WorkingWithPhysics\Scripts\Brick.cs" />
      <Compile Include="Assets\iTweenExamples\WorkingWithPhysics\Scripts\SimpleCameraFade.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

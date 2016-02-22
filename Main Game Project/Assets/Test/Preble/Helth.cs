@@ -5,6 +5,7 @@ public class Helth : MonoBehaviour {
     public Slider HealthBar;
     public int Health;
     public Text HealthT;
+    public GameObject FireBall;
 
     // Use this for initialization
     void Start () {
@@ -20,7 +21,9 @@ public class Helth : MonoBehaviour {
         if (other.gameObject.tag == "Bad")
         {
             Debug.Log("It should start going down.");
-            Health -= 1;
+            Health -= 10;
+            Destroy(FireBall);
+
         }
     }
 	// Update is called once per frame
