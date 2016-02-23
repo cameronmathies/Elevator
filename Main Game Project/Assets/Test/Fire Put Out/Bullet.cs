@@ -4,12 +4,15 @@ using System.Collections;
 public class Bullet : MonoBehaviour
 {
     public GameObject spawnPoint;
-    public Rigidbody projectile1;
+    public Rigidbody2D projectile1;
     public AudioSource shot;
     public GameObject projectilePrefab;
+    public GameObject Parent;
     public float ShotSpeed;
     public float timer;
     public float nextFire = -1.0f;
+    public float timerCode = 5f;
+
 
 
 
@@ -17,6 +20,16 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         nextFire = Time.time;
+    }
+    void Attack()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            Rigidbody clone;
+            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+        }
+
     }
     // Update is called once per frame
     void Update()
@@ -29,7 +42,7 @@ public class Bullet : MonoBehaviour
                 nextFire = nextFire + 1;
                 Rigidbody hitPlayer;
                 hitPlayer = Instantiate(projectile1, transform.position, transform.rotation) as Rigidbody;
-                hitPlayer.velocity = transform.TransformDirection(Vector3.forward * ShotSpeed);
+                hitPlayer.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
                 // AudioSource audio = GetComponent<AudioSource>();
                 //  audio.Play();
             }
@@ -43,12 +56,15 @@ public class Bullet : MonoBehaviour
             {
                 Rigidbody clone;
                 clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-                clone.velocity = transform.TransformDirection(Vector3.forward * ShotSpeed);
+                //clone = (Instantiate(projectilePrefab, transform.position, transform.rotation) as GameObject).transform.parent = projectilePrefab.transform;
+                clone.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
                 //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
 
 
             }
         }
+
+
 
     }
 }
