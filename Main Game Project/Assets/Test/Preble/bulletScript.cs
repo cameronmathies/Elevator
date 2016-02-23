@@ -28,7 +28,7 @@ public class bulletScript : MonoBehaviour
         parent = obj;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
 
         if (other.gameObject.tag == "Player")
@@ -37,6 +37,7 @@ public class bulletScript : MonoBehaviour
             Destroy(gameObject);
 
         }
-
-    }
 }
+}
+
+   

@@ -10,14 +10,34 @@ public class Bullet : MonoBehaviour
     public GameObject Parent;
     public float ShotSpeed;
     public float timer;
-    public float nextFire = -1.0f;
+    public float nextFire = -11.0f;
     public float timerCode = 5f;
 
 
 
+    void OnTriggerStay2D(Collider2D other)
+    {
 
-    // Use this for initialization
-    void Start()
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Fire");
+            //Rigidbody clone;
+            //clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+            StartCoroutine("fire");
+            if (Time.time >= nextFire)
+            {
+                Rigidbody clone;
+                clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+            }
+        }
+    }
+
+    //IEnumerator fire()
+    //{
+    //    yield return new WaitForSeconds(3);
+    //}
+        // Use this for initialization
+        void Start()
     {
         nextFire = Time.time;
     }
