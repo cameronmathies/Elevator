@@ -12,26 +12,40 @@ public class Bullet : MonoBehaviour
     public float timer;
     public float nextFire = -11.0f;
     public float timerCode = 5f;
+    public GameObject m_Enemy;
+    public float m_SpawnTime = 3f;
+    public Transform[] m_SpawnPoints;
 
 
-
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+
 
         if (other.gameObject.tag == "Player")
         {
+            nextFire = nextFire + 4;
+            Rigidbody hitPlayer;
             Debug.Log("Fire");
             //Rigidbody clone;
             //clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-            StartCoroutine("fire");
+
+            //StartCoroutine("fire");
             if (Time.time >= nextFire)
             {
                 Rigidbody clone;
                 clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+                InvokeRepeating("FireBall", m_SpawnTime, m_SpawnTime);
+
+                //StartCoroutine("fire");
             }
         }
     }
 
+    void FireBall()
+    {
+        Rigidbody clone;
+        clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+    }
     //IEnumerator fire()
     //{
     //    yield return new WaitForSeconds(3);
@@ -48,6 +62,7 @@ public class Bullet : MonoBehaviour
         {
             Rigidbody clone;
             clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+
         }
 
     }
@@ -74,6 +89,7 @@ public class Bullet : MonoBehaviour
         {
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
+                Debug.Log("VARVAR");
                 Rigidbody clone;
                 clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
                 //clone = (Instantiate(projectilePrefab, transform.position, transform.rotation) as GameObject).transform.parent = projectilePrefab.transform;
