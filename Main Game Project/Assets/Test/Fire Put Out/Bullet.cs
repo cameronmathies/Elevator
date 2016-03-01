@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
     void FireBall()
     {
         Rigidbody clone;
-        clone = Instantiate(projectilePrefab, spawnPoint.transform.position, spawnPoint.transform.rotation) as Rigidbody;
+        clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
     }
     //IEnumerator fire()
     //{
@@ -61,7 +61,7 @@ public class Bullet : MonoBehaviour
         if (timer <= 0)
         {
             Rigidbody clone;
-            clone = Instantiate(projectilePrefab, spawnPoint.transform.position, spawnPoint.transform.rotation) as Rigidbody;
+            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
         
         //  clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
 
