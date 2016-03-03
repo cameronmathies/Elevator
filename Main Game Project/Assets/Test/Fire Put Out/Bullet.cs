@@ -73,40 +73,40 @@ public class Bullet : MonoBehaviour
 
     }
     // Update is called once per frame
-    void Update()
-    {
+    //void Update()
+    //{
 
-        if (Time.time >= nextFire)
-        {
-            if (Input.GetButtonDown("Fire1"))
-            {
-                nextFire = nextFire + 1;
-                Rigidbody hitPlayer;
-                hitPlayer = Instantiate(projectile1, transform.position, transform.rotation) as Rigidbody;
-                hitPlayer.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
-                // AudioSource audio = GetComponent<AudioSource>();
-                //  audio.Play();
-            }
-        }
-
-
-
-        for (var i = 0; i < Input.touchCount; ++i)
-        {
-            if (Input.GetTouch(i).phase == TouchPhase.Began)
-            {
-                Debug.Log("VARVAR");
-                Rigidbody clone;
-                clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-                //clone = (Instantiate(projectilePrefab, transform.position, transform.rotation) as GameObject).transform.parent = projectilePrefab.transform;
-                clone.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
-                //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
-
-
-            }
-        }
+    //    if (Time.time >= nextFire)
+    //    {
+    //        if (Input.GetButtonDown("Fire1"))
+    //        {
+    //            nextFire = nextFire + 1;
+    //            Rigidbody hitPlayer;
+    //            hitPlayer = Instantiate(projectile1, transform.position, transform.rotation) as Rigidbody;
+    //            hitPlayer.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
+    //            // AudioSource audio = GetComponent<AudioSource>();
+    //            //  audio.Play();
+    //        }
+    //    }
 
 
 
-    }
+    //    for (var i = 0; i < Input.touchCount; ++i)
+    //    {
+    //        if (Input.GetTouch(i).phase == TouchPhase.Began)
+    //        {
+    //            Debug.Log("VARVAR");
+    //            Rigidbody clone;
+    //            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+    //            //clone = (Instantiate(projectilePrefab, transform.position, transform.rotation) as GameObject).transform.parent = projectilePrefab.transform;
+    //            clone.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
+    //            //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
+
+
+    //        }
+      //  }
+
+
+
+  //  }
 }

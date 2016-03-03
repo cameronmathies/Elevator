@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed;
     public float speed = 10f;
 	public float RotateSpeed;
+    public float jump;
 
     void FixedUpdate()
     {
@@ -20,7 +21,7 @@ public class PlayerMove : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            transform.Translate(Vector3.up * moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.up * jump * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
