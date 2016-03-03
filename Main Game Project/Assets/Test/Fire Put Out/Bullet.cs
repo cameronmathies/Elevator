@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
                 clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
                 InvokeRepeating("FireBall", m_SpawnTime, m_SpawnTime);
 
-                //StartCoroutine("fire");
+                StartCoroutine("fire");
             }
         }
     }
@@ -46,13 +46,17 @@ public class Bullet : MonoBehaviour
         Rigidbody clone;
         clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
     }
-    //IEnumerator fire()
-    //{
-    //    yield return new WaitForSeconds(3);
-    //}
+    IEnumerator fire()
+    {
+        yield return new WaitForSeconds(3);
+         Rigidbody clone;
+        clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+        StartCoroutine("fire");
+    }
         // Use this for initialization
         void Start()
     {
+        StartCoroutine("fire");
         nextFire = Time.time;
     }
     void Attack()
