@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cd9e100573d0cdf43a366d401496d1c0
+timeCreated: 1457369946
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - PlayerFireBall: {fileID: 149196, guid: 8123de321ea21974998c8060109f5959, type: 2}
+  - PrebleFireBall: {fileID: 125782, guid: b8f621470d81ab244a87fc3f19fac43b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
