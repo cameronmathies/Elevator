@@ -13,6 +13,8 @@ public class PrebleHelth : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
+
         Health = 100;
     }
     void OnTriggerEnter2D(Collider2D other)

@@ -49,64 +49,61 @@ public class Bullet : MonoBehaviour
     IEnumerator fire()
     {
         yield return new WaitForSeconds(3);
-         Rigidbody clone;
+        Rigidbody clone;
         clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
         //StartCoroutine("fire");
     }
-        // Use this for initialization
-        void Start()
+    // Use this for initialization
+    void Start()
     {
-        StartCoroutine("fire");
+        // StartCoroutine("fire");
         nextFire = Time.time;
     }
-    void Attack()
-    {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            Rigidbody clone;
-            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-        
-        //  clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-
-    }
-
-    }
-    // Update is called once per frame
-    //void Update()
+    //void Attack()
     //{
-
-    //    if (Time.time >= nextFire)
+    //    timer -= Time.deltaTime;
+    //    if (timer <= 0)
     //    {
-    //        if (Input.GetButtonDown("Fire1"))
-    //        {
-    //            nextFire = nextFire + 1;
-    //            Rigidbody hitPlayer;
-    //            hitPlayer = Instantiate(projectile1, transform.position, transform.rotation) as Rigidbody;
-    //            hitPlayer.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
-    //            // AudioSource audio = GetComponent<AudioSource>();
-    //            //  audio.Play();
-    //        }
+    //        StartCoroutine("fire");
+    //        // Rigidbody clone;
+    //        //clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+
+    //        //  clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+
     //    }
 
+    //}
+    // Update is called once per frame
+    void ReturnUpdate()
+    {
 
+        if (Time.time >= nextFire)
+        {
 
-    //    for (var i = 0; i < Input.touchCount; ++i)
-    //    {
-    //        if (Input.GetTouch(i).phase == TouchPhase.Began)
-    //        {
-    //            Debug.Log("VARVAR");
-    //            Rigidbody clone;
-    //            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-    //            //clone = (Instantiate(projectilePrefab, transform.position, transform.rotation) as GameObject).transform.parent = projectilePrefab.transform;
-    //            clone.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
-    //            //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
+            //yield return new WaitForSeconds(3);
+            StartCoroutine("fire");
 
-
-    //        }
-      //  }
+        }
 
 
 
-  //  }
+        //    for (var i = 0; i < Input.touchCount; ++i)
+        //    {
+        //        if (Input.GetTouch(i).phase == TouchPhase.Began)
+        //        {
+        //            Debug.Log("VARVAR");
+        //            Rigidbody clone;
+        //            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+        //            //clone = (Instantiate(projectilePrefab, transform.position, transform.rotation) as GameObject).transform.parent = projectilePrefab.transform;
+        //            clone.velocity = transform.TransformDirection(Vector2.right * ShotSpeed);
+        //            //            Physics.IgnoreCollision ( projectilePrefab.collider, transform.root.collider );
+
+
+        //        }
+        //  }
+
+
+
+        //  }
+    }
 }
