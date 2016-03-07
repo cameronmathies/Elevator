@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerShot : MonoBehaviour {
+public class PlayerShot : MonoBehaviour
+{
     public GameObject spawnPoint;
     public Rigidbody2D projectile1;
     public AudioSource shot;
@@ -15,20 +16,32 @@ public class PlayerShot : MonoBehaviour {
     public float m_SpawnTime = 3f;
     public Transform[] m_SpawnPoints;
     // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetButtonDown("Fire1"))
         {
             nextFire = nextFire + 1;
             Rigidbody hitPlayer;
             hitPlayer = Instantiate(projectile1, transform.position, transform.rotation) as Rigidbody;
             hitPlayer.velocity = transform.TransformDirection(Vector2.left * ShotSpeed);
+            StartCoroutine("fire");
             // AudioSource audio = GetComponent<AudioSource>();
             //  audio.Play();
         }
     }
+    IEnumerator fire()
+    {
+        yield return new WaitForSeconds(3);
+        Rigidbody clone;
+        clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+        
+
+    }
+
 }

@@ -21,23 +21,23 @@ public class Bullet : MonoBehaviour
     {
 
 
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Good")
         {
             nextFire = nextFire + 4;
             Rigidbody hitPlayer;
             Debug.Log("Fire");
             //Rigidbody clone;
             //clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-
+            StartCoroutine("fire");
             //StartCoroutine("fire");
-            if (Time.time >= nextFire)
-            {
-                Rigidbody clone;
-                clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-                InvokeRepeating("FireBall", m_SpawnTime, m_SpawnTime);
+            //if (Time.time >= nextFire)
+            //{
+            //    Rigidbody clone;
+            //    clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+            //    InvokeRepeating("FireBall", m_SpawnTime, m_SpawnTime);
 
-                StartCoroutine("fire");
-            }
+            //    StartCoroutine("fire");
+            //}
         }
     }
 
@@ -51,7 +51,7 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(3);
          Rigidbody clone;
         clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-        StartCoroutine("fire");
+        //StartCoroutine("fire");
     }
         // Use this for initialization
         void Start()
