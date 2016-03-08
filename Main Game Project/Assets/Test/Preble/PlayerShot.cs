@@ -21,7 +21,8 @@ public class PlayerShot : MonoBehaviour
         if (Time.time >= timestamp && (Input.GetButtonDown("Fire1")))
         {
             //Instantiate(bullet, new Vector2(if * 2F, p), Quaternion.identity);
-            GameObject childObject = Instantiate(bullet) as GameObject;
+            //GameObject childObject = Instantiate(bullet) as GameObject;
+            GameObject childObject = Instantiate(bullet, transform.position.x + (transform.forward * 2), transform.rotation);
             childObject.transform.parent = PLayer.transform;
             //GameObject go = Instantiate(Resources.Load("PlayerShot")) as GameObject;
             Rigidbody clone;
