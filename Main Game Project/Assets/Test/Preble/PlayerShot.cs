@@ -1,22 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerShot : MonoBehaviour
 {
 
     public GameObject bullet;
     public GameObject PLayer;
+    public Transform SpawnPoint;
+
     public float timeBetweenShots = 1f;  // Allow 3 shots per second
 
     private float timestamp;
 
     void Update()
     {
+        float x = transform.position.x;
+        float y = transform.position.y;
+    
         if (Time.time >= timestamp && (Input.GetButtonDown("Fire1")))
         {
+            //Instantiate(bullet, new Vector2(if * 2F, p), Quaternion.identity);
+            GameObject childObject = Instantiate(bullet) as GameObject;
+            childObject.transform.parent = PLayer.transform;
+            //GameObject go = Instantiate(Resources.Load("PlayerShot")) as GameObject;
             Rigidbody clone;
-            clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-            clone.transform.SetParent(PLayer.transform, true);
+            //clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+            //clone.transform.SetParent(PLayer.transform, true);
 
             timestamp = Time.time + timeBetweenShots;
         }
@@ -38,11 +48,18 @@ public class PlayerShot : MonoBehaviour
     //public float m_SpawnTime = 3f;
     //public Transform[] m_SpawnPoints;
     //// Use this for initialization
-    //void Start()
-    //{
-    //    //nextFire = Time.time;
+    void Start()
+    {
 
-    //}
+        //    //nextFire = Time.time;
+        //for (int y = 0; y < 5; y++)
+        //{
+        //    for (int x = 0; x < 5; x++)
+        //    {
+        //       ube.transform.position = new Vector2(x, y);
+        //    }
+        //}
+    }
 
     //// Update is called once per frame
     //void Update()
