@@ -13,10 +13,14 @@ public class PlayerMove : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
+            
+            transform.rotation = Quaternion.Euler (0, 180, 0); 
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
+           
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.Space))
