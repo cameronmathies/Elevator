@@ -51,11 +51,12 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(3);
         Rigidbody clone;
         clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-        //StartCoroutine("fire");
+        StartCoroutine("fire");
     }
     // Use this for initialization
     void Start()
     {
+        StartCoroutine("fire");
         // StartCoroutine("fire");
         nextFire = Time.time;
     }

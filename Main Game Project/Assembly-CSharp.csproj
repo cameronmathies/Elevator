@@ -56,6 +56,7 @@
      <Compile Include="Assets\Test\Fire Put Out\Score.cs" />
      <Compile Include="Assets\Test\Fire Put Out\ScoreManager.cs" />
      <Compile Include="Assets\Test\Preble\BulletDelete.cs" />
+     <Compile Include="Assets\Test\Preble\EnemyFollow.cs" />
      <Compile Include="Assets\Test\Preble\Helth.cs" />
      <Compile Include="Assets\Test\Preble\Patrol.cs" />
      <Compile Include="Assets\Test\Preble\PlayerShot.cs" />

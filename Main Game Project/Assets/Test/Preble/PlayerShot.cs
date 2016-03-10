@@ -22,7 +22,7 @@ public class PlayerShot : MonoBehaviour
         if (Time.time >= timestamp && (Input.GetButtonDown("Fire1")))
         {
            // GameObject childObject =
-                Instantiate(bullet, PLayer.position, PLayer.rotation); //instantiates laser to shotSpawn location
+                GameObject.Instantiate(bullet, PLayer.position, Quaternion.identity); //instantiates laser to shotSpawn location
            // bullet.transform.parent = PLayer.transform;
             //Instantiate(bullet, new Vector2(if * 2F, p), Quaternion.identity);
             //GameObject childObject = Instantiate(bullet) as GameObject;

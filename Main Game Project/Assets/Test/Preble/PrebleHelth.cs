@@ -39,7 +39,7 @@ public class PrebleHelth : MonoBehaviour {
         {
             HealthBar.value = Health;
         }
-        HealthT.text = Health + "%";
+        //HealthT.text = "Player" + Health + "%";
 
         if (Health < 0)
         {
