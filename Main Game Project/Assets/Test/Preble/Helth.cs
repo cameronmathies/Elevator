@@ -21,7 +21,7 @@ public class Helth : MonoBehaviour {
         if (other.gameObject.tag == "Bad")
         {
             Debug.Log("It should start going down.");
-            Health -= 10;
+            Health -= 6;
             Destroy(FireBall);
 
         }

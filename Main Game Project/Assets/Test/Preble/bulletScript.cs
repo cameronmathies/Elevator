@@ -10,6 +10,7 @@ public class bulletScript : MonoBehaviour
     public float nextFire = -11.0f;
     public float timer;
     private Vector3 theScale;
+    public GameObject Bullet;
 
     void Start()
     {
@@ -39,13 +40,13 @@ public class bulletScript : MonoBehaviour
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                
+
             }
             Debug.Log("It should start going down.");
-            Destroy(gameObject);
+           // Destroy(Bullet);
 
         }
-}
+    }
 }
 
    

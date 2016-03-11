@@ -14,8 +14,8 @@ public class BulletDelete : MonoBehaviour
     {
         if (other.gameObject.tag == "Bad")
         {
-
-            Destroy(PlayerFireBall);
+            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Good")

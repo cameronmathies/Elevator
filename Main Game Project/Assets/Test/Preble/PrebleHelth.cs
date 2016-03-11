@@ -13,8 +13,6 @@ public class PrebleHelth : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
-
         Health = 100;
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -27,7 +25,7 @@ public class PrebleHelth : MonoBehaviour {
         if (other.gameObject.tag == "Good")
         {
             Debug.Log("It should start going down.");
-            Health -= 10;
+            Health -= 5;
             Destroy(FireBall);
 
         }
@@ -39,7 +37,7 @@ public class PrebleHelth : MonoBehaviour {
         {
             HealthBar.value = Health;
         }
-        //HealthT.text = "Player" + Health + "%";
+        HealthT.text = Health + "%";
 
         if (Health < 0)
         {

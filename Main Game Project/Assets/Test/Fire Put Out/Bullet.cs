@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
             Debug.Log("Fire");
             //Rigidbody clone;
             //clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-            StartCoroutine("fire");
+            //StartCoroutine("fire");
             //StartCoroutine("fire");
             //if (Time.time >= nextFire)
             //{
@@ -44,13 +44,14 @@ public class Bullet : MonoBehaviour
     void FireBall()
     {
         Rigidbody clone;
-        clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
-    }
-    IEnumerator fire()
+        GameObject.Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+    }//instantiates laser to shotSpawn locati    }
+        IEnumerator fire()
+            
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         Rigidbody clone;
-        clone = Instantiate(projectilePrefab, transform.position, transform.rotation) as Rigidbody;
+        GameObject.Instantiate(projectilePrefab, transform.position, Quaternion.identity); //instantiates laser to shotSpawn location
         StartCoroutine("fire");
     }
     // Use this for initialization
